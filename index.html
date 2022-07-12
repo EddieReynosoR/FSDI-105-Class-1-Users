@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users System</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the User Registration System</h1>
+    </header>
+
+
+
+    <main>
+        <h2>New user</h2>
+        <div class="form-container">   
+            <!-- name, last name, email, password, password confirmation, payment method, color -->
+            <div class="form-control">
+                <label>Name:</label>
+                <input type="text" name="Name" id="txtName" placeholder="Name">
+            </div>
+            
+
+            <div class="form-control">
+                <label>Last name:</label>
+                <input type="text" name="LastName" id="txtLastName" placeholder="Last name">
+            </div>
+            
+
+            <div class="form-control">
+                <label>Email:</label>
+                <input type="email" name="Email" id="txtEmail" placeholder="Email">
+            </div>
+            
+
+            <div class="form-control">
+                <label>Password: </label>
+                <input type="password" name="Password" id="txtPassword" placeholder="Password">
+            </div>
+            
+
+            <div class="form-control">
+                <label>Confirm password: </label>
+            <input type="password" name="Password" id="txtPasswordC" placeholder="Confirm password">
+            </div>
+            
+
+            <div class="form-control">
+                <label>Payment method:</label>
+                <select name="Payment" id="txtPayment">
+                    <option value="PayPal">PayPal</option>
+                    <option value="Credit card">Credit card</option>
+                </select>
+            </div>
+            
+
+            <div class="form-control">
+                <label>User color: </label>
+                <input type="color" name="Color" id="txtColor" placeholder="User color">
+            </div>
+
+            <button onclick="Register()">Register</button>
+            
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js
+    "></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
