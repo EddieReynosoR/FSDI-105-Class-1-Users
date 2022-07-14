@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <title>Users System</title>
+</head>
+<body>
+    <header>
+        <nav class="nav justify-content-center"> 
+            <a href="index.html" class="nav-link" id="homeBtn">Home</a>
+            <a href="register.html" class="nav-link">Register</a>
+            <a href="users.html" class="nav-link">Users</a>
+        </nav>
+        <h1>Welcome to the User Registration System</h1>
+    </header>
+
+
+
+    <main id="main">
+        <h2>New user</h2>
+        <div class="form-container">   
+            <!-- name, last name, email, password, password confirmation, payment method, color -->
+
+            <div id="messageError">
+                
+            </div>
+            <div class="mb-3">
+                <label>Name:</label>
+                <input type="text" name="Name" id="txtName" placeholder="Name" class="form-control">
+            </div>
+            
+
+            <div class="mb-3">
+                <label>Last name:</label>
+                <input type="text" name="LastName" id="txtLastName" placeholder="Last name" class="form-control">
+            </div>
+            
+
+            <div class="mb-3">
+                <label>Email:</label>
+                <input type="email" name="Email" id="txtEmail" placeholder="Email" class="form-control">
+            </div>
+            
+
+            <div class="mb-3">
+                <label>Password: </label>
+                <input type="password" name="Password" id="txtPassword" placeholder="Password" class="form-control">
+            </div>
+            
+
+            <div class="mb-3">
+                <label>Confirm password: </label>
+            <input type="password" name="Password" id="txtPasswordC" placeholder="Confirm password" class="form-control">
+            </div>
+            
+
+            <div class="mb-3">
+                <label>Payment method:</label>
+                <select name="Payment" id="txtPayment" class="form-select">
+                    <option value="PayPal">PayPal</option>
+                    <option value="Credit card">Credit card</option>
+                </select>
+            </div>
+            
+
+            <div class="mb-3">
+                <label>User color: </label>
+                <input type="color" name="Color" id="txtColor" placeholder="User color" class="form-control">
+            </div>
+
+            <button onclick="Register()" class="btn btn-primary">Register</button>
+            
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js
+    "></script>
+    <script src="scripts/storeManager.js"></script>
+    <script src="scripts/app.js"></script>
+
+    <!-- <script src="scripts/navBar.js"></script> -->
+</body>
+</html>
