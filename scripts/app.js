@@ -72,8 +72,18 @@ function Register(){
         saveUser(newUser); // the function in on the storeManager
 
     }
+
+    Clear();
     //console.log(newUser);
 
+}
+
+function Clear(){
+    $("#txtName").val("");
+    $("#txtLastName").val("");
+    $("#txtEmail").val("");
+    $("#txtPassword").val("");
+    $("#txtPasswordC").val("");
 }
 
 

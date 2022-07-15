@@ -9,14 +9,16 @@
 
     <link rel="stylesheet" href="styles/styles.css">
 
+    <script src="https://kit.fontawesome.com/337be747ec.js" crossorigin="anonymous"></script>
+
+
     <title>Users System</title>
 </head>
 <body>
     <header>
         <nav class="nav justify-content-center"> 
             <a href="index.html" class="nav-link" id="homeBtn">Home</a>
-            <a href="register.html" class="nav-link">Register</a>
-            <a href="users.html" class="nav-link">Users</a>
+            <a href="users.html" class="nav-link" id="usersBtn">Users</a>
         </nav>
         <h1>Welcome to the User Registration System</h1>
     </header>
@@ -75,7 +77,9 @@
                 <input type="color" name="Color" id="txtColor" placeholder="User color" class="form-control">
             </div>
 
-            <button onclick="Register()" class="btn btn-primary">Register</button>
+            <div class="button-container">
+                <button onclick="Register()" class="btn btn-primary">Register</button> 
+            </div>
             
         </div>
     </main>
