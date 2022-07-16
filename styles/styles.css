@@ -79,3 +79,13 @@ h2{
     border-color: #ffffff;
     color: #26ff00;
 }
+
+.title-container{
+    margin-bottom: 20px;
+}
+ 
+.main-users{
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+}

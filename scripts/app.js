@@ -88,6 +88,42 @@ function Clear(){
 
 
 function init(){
+    $("#userForm").hide();
+    $("#hideForm").hide();
+
+    // hook events
+    $("#newUser").click(function(){
+        
+        $("#hideForm").show();
+        $("#newUser").hide();
+
+    });
+
+    $("#newUser").click(function(){
+        $("#userForm").slideDown(2000);
+
+        console.log("Sliding down...");
+    });
+
+
+    $("#hideForm").click(function(){
+        
+        
+        $("#hideForm").hide();
+        $("#newUser").show();
+        
+
+    });
+
+    $("#hideForm").click(function(){
+        $("#userForm").slideUp(2000);
+        console.log("Sliding up...");
+    })
+
+    // $("#hideForm").click(function(){
+    //     $("userForm").slideUp();
+    // });
+
 
 }
 
