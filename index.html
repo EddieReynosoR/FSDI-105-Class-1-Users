@@ -23,13 +23,41 @@
         <nav class="nav justify-content-center"> 
             
             <a href="register.html" class="nav-link" id="registerBtn">Sign up</a>
-            <a href="users.html" class="nav-link" id="usersBtn">Users</a>
         </nav>
 
     </header>
 
-    <main>
+    <main class="main-form">
         <h2>Welcome to the users registration WebSite</h2>
+
+        <div class="form-container">   
+            <!-- name, last name, email, password, password confirmation, payment method, color -->
+
+            <div id="messageUser">
+                
+            </div>
+            
+            <div class="mb-3">
+                <label>User:</label>
+                <input type="text" name="User" id="txtUser" placeholder="User" class="form-control">
+            </div>
+            
+
+            
+            
+
+            <div class="mb-3">
+                <label>Password: </label>
+                <input type="password" name="Password" id="txtPass" placeholder="Password" class="form-control">
+            </div>
+            
+
+
+            <div class="button-container">
+                <button id="loginBtn" class="btn btn-primary">Login</button> 
+            </div>
+            
+        </div>
     </main>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js
@@ -37,5 +65,6 @@
     <script src="scripts/storeManager.js"></script>
     <script src="scripts/app.js"></script>
     <!-- <script src="scripts/navBar.js"></script> -->
+    <script src="scripts/login.js"></script>
 </body>
 </html>

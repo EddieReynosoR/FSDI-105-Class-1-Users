@@ -24,6 +24,7 @@ function isValid(user){
     let valid = true;
 
 
+
     if(user.firstName.length == 0){
         valid = false;
         document.getElementById("messageError").innerHTML += `<p> Please, enter your first name. </p>`;
@@ -56,8 +57,47 @@ function isValid(user){
         console.error("Please, enter a password");
     }
 
+    let Pass = $("#txtPassword").val();
+    let PassC = $("#txtPasswordC").val();
+
+    if(Pass != PassC){
+        valid = false;
+        alert("The passwords must be the same.");
+        $("#txtPasswordC").addClass("input-error");
+    }
+    
+
+    let validName = readUsers();
+    
+    for (let i = 0; i < validName.length; i++) {
+        if($("#txtName").val() == validName[i].firstName);{
+            alert("That name already exists.");
+            valid = false;
+        }
+        
+    }
+
     return valid;
 }
+
+function validPass(){
+    console.log("Validating password...");
+
+    let Pass = $("#txtPassword").val();
+    let password = $("#txtPassword");
+
+
+    if(Pass.length < 6){
+        password.css("background-color", "#ff8e8e");
+        //password.addClass();
+    }
+    else{
+        password.css("background-color", "#7aff59");
+
+    }
+
+}
+
 
 // create the register function
 function Register(){
@@ -68,12 +108,14 @@ function Register(){
 
     let newUser = new User(userName,userLName,userEmail,userPass);
 
+    
+
     if(isValid(newUser)){
         saveUser(newUser); // the function in on the storeManager
+        Clear();
 
     }
 
-    Clear();
     //console.log(newUser);
 
 }
@@ -84,6 +126,9 @@ function Clear(){
     $("#txtEmail").val("");
     $("#txtPassword").val("");
     $("#txtPasswordC").val("");
+
+    $("#txtUser").val("");
+    $("#txtPass").val("");
 }
 
 
@@ -123,6 +168,10 @@ function init(){
     // $("#hideForm").click(function(){
     //     $("userForm").slideUp();
     // });
+
+    $("#txtPassword").keyup(validPass);
+    
+
 
 
 }

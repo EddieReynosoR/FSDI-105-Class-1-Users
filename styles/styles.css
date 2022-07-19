@@ -19,12 +19,16 @@ header h1{
     margin-top: 10px;
 }
 
-h2{
+h2, h3{
     color: white;
 }
 
 .input-error{
-    background-color: rgb(255, 142, 142);
+    background-color: #ff8e8e;
+}
+.input-good{
+    background-color: #7aff59;
+
 }
 
 .message-error{
@@ -71,7 +75,7 @@ h2{
 
 .btn.btn-primary{
     background-color: #00d4aa;
-    border-color: #19a501;
+    border-color: #ff8d8d;
 }
 
 .btn.btn-primary:hover{
@@ -88,4 +92,8 @@ h2{
     margin-right: 20px;
     margin-left: 20px;
     margin-top: 20px;
+}
+
+.hide{
+    display: none;
 }
