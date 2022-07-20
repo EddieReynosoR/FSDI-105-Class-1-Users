@@ -20,10 +20,44 @@ function displayUsers(usersArray){
 
 
 function init(){
+
     console.log("Listing users...");
     let users = readUsers();
 
     displayUsers(users);
+    
+    $("#userTable").hide();
+    $("#hideTable").hide();
+
+    // hook events
+    $("#showTable").click(function(){
+        
+        $("#hideTable").show();
+        $("#showTable").hide();
+
+    });
+
+    $("#showTable").click(function(){
+        $("#userTable").slideDown(1000);
+
+        console.log("Sliding down...");
+    });
+
+
+    $("#hideTable").click(function(){
+        
+        
+        $("#hideTable").hide();
+        $("#showTable").show();
+        
+
+    });
+
+    $("#hideTable").click(function(){
+        $("#userTable").slideUp(1000);
+        console.log("Sliding up...");
+    });
+
 }
 
 window.onload = init;

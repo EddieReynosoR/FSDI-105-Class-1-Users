@@ -27,32 +27,30 @@ function isValid(user){
 
     if(user.firstName.length == 0){
         valid = false;
-        document.getElementById("messageError").innerHTML += `<p> Please, enter your first name. </p>`;
-        $("#messageError").addClass("message-error");
+        
         $("#txtName").addClass("input-error");
         console.error("Please, enter your first name");
     }
 
     if(user.lastName.length == 0){
         valid = false;
-        document.getElementById("messageError").innerHTML += `<p> Please, enter your last name. </p>`;
-        $("#messageError").addClass("message-error");
+        
+       
         $("#txtLastName").addClass("input-error");
         console.error("Please, enter your last name");
     }
 
     if(user.email.length == 0){
         valid = false;
-        document.getElementById("messageError").innerHTML += `<p> Please, enter your email. </p>`;
-        $("#messageError").addClass("message-error");
+        
         $("#txtEmail").addClass("input-error");
         console.error("Please, enter a your email");
     }
 
     if(user.password.length == 0){
         valid = false;
-        document.getElementById("messageError").innerHTML += `<p> Please, enter your password. </p>`;
-        $("#messageError").addClass("message-error");
+        
+        
         $("#txtPassword").addClass("input-error");
         console.error("Please, enter a password");
     }
@@ -65,17 +63,14 @@ function isValid(user){
         alert("The passwords must be the same.");
         $("#txtPasswordC").addClass("input-error");
     }
+
+    if(Pass.length < 6){
+        alert("The password must be longer than 6 character.");
+        $("#txtPassword").addClass("input-error");
+    }
     
 
-    let validName = readUsers();
     
-    for (let i = 0; i < validName.length; i++) {
-        if($("#txtName").val() == validName[i].firstName);{
-            alert("That name already exists.");
-            valid = false;
-        }
-        
-    }
 
     return valid;
 }
@@ -111,9 +106,17 @@ function Register(){
     
 
     if(isValid(newUser)){
-        saveUser(newUser); // the function in on the storeManager
+        saveUser(newUser); 
+        // the function in on the storeManager
+
+        alert("The user has been added.")
+        window.location="index.html";
         Clear();
 
+    }else{
+        document.getElementById("messageError").innerHTML = `<p> You must add all the info that is needed. </p>`;
+        $("#messageError").addClass("message-error");
+        $("#txtName").addClass("input-error");
     }
 
     //console.log(newUser);
@@ -163,7 +166,7 @@ function init(){
     $("#hideForm").click(function(){
         $("#userForm").slideUp(2000);
         console.log("Sliding up...");
-    })
+    });
 
     // $("#hideForm").click(function(){
     //     $("userForm").slideUp();

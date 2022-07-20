@@ -4,6 +4,7 @@
 }
 
 header{
+    padding-left: 10px;
     background-color: #87fa73;
     display: flex;
     justify-content: space-between;
@@ -95,5 +96,9 @@ h2, h3{
 }
 
 .hide{
+    display: none;
+}
+
+#userTable{
     display: none;
 }

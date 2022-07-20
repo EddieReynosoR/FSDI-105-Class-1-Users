@@ -16,12 +16,14 @@
 
     <script src="https://kit.fontawesome.com/337be747ec.js" crossorigin="anonymous"></script>
 
+    <script src="https://kit.fontawesome.com/337be747ec.js" crossorigin="anonymous"></script>
+
 
     <title>Users System</title>
 </head>
 <body>
     <header>
-        <h1>User Registration System</h1>
+        <h1><i class="fa-solid fa-user"></i> User Registration System</h1>
         <nav class="nav justify-content-center"> 
             <a href="index.html" class="nav-link" id="homeBtn">Login</a>
             
@@ -43,7 +45,7 @@
                 
             </div>
             <div class="mb-3">
-                <label>Name:</label>
+                <label><i class="fa-solid fa-user-check"></i> Name:</label>
                 <input type="text" name="Name" id="txtName" placeholder="Name" class="form-control">
             </div>
             
@@ -55,13 +57,13 @@
             
 
             <div class="mb-3">
-                <label>Email:</label>
+                <label><i class="fa-solid fa-at"></i> Email:</label>
                 <input type="email" name="Email" id="txtEmail" placeholder="Email" class="form-control">
             </div>
             
 
             <div class="mb-3">
-                <label>Password: </label>
+                <label><i class="fa-solid fa-key"></i> Password: </label>
                 <input type="password" name="Password" id="txtPassword" placeholder="Password" class="form-control">
             </div>
             
@@ -72,19 +74,6 @@
             </div>
             
 
-            <div class="mb-3">
-                <label>Payment method:</label>
-                <select name="Payment" id="txtPayment" class="form-select">
-                    <option value="PayPal">PayPal</option>
-                    <option value="Credit card">Credit card</option>
-                </select>
-            </div>
-            
-
-            <div class="mb-3">
-                <label>User color: </label>
-                <input type="color" name="Color" id="txtColor" placeholder="User color" class="form-control">
-            </div>
 
             <div class="button-container">
                 <button onclick="Register()" class="btn btn-primary">Register</button> 
